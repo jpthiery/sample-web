@@ -1,8 +1,9 @@
 package fr.xebia.jpthiery.xke.sampleweb;
 
-import spark.Spark;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import static spark.Spark.*;
+import static spark.Spark.get;
 import static spark.SparkBase.staticFileLocation;
 
 /**
@@ -10,16 +11,19 @@ import static spark.SparkBase.staticFileLocation;
  */
 public class SampleWebServer {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(SampleWebServer.class);
+
     public SampleWebServer() {
         super();
     }
 
     public void runServer() {
-        staticFileLocation("/");
+        staticFileLocation("/webapp");
 
-        get("/", (request, response) ->
-             "HelloWorld"
-        );
+        get("/user/:name", (request, response) -> String.format("Hello %s", request.params("name")));
+
+
+        get("/user/bye/:name", (request, response) -> String.format("Bye %s", request.params("name")));
     }
 
     public static void main(String[] args) {
