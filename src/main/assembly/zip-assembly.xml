@@ -6,7 +6,7 @@
     <dependencySets>
         <dependencySet>
             <useProjectArtifact>false</useProjectArtifact>
-            <outputDirectory>lib</outputDirectory>
+            <outputDirectory>app/lib</outputDirectory>
             <unpack>false</unpack>
         </dependencySet>
     </dependencySets>
@@ -14,10 +14,27 @@
     <fileSets>
         <fileSet>
             <directory>${project.build.directory}</directory>
-            <outputDirectory></outputDirectory>
+            <outputDirectory>app/</outputDirectory>
             <includes>
                 <include>*.jar</include>
             </includes>
         </fileSet>
+        <fileSet>
+            <directory>${basedir}/src/main/scripts</directory>
+            <outputDirectory>app/</outputDirectory>
+            <includes>
+                <include>*.sh</include>
+            </includes>
+            <filtered>true</filtered>
+
+        </fileSet>
     </fileSets>
+    <files>
+        <file>
+            <source>${basedir}/src/main/docker/Dockerfile</source>
+            <outputDirectory></outputDirectory>
+            <filtered>true</filtered>
+        </file>
+
+    </files>
 </assembly>
