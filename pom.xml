@@ -18,7 +18,7 @@
     </properties>
 
     <scm>
-        <developerConnection>scm:git:file://localhost/root/workspace/deploy-sample-web/</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:jpthiery/sample-web.git</developerConnection>
     </scm>
 
     <dependencies>
