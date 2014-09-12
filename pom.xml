@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <gatling.version>2.0.0-RC1</gatling.version>
+        <gatling.version>2.0.0-RC4</gatling.version>
     </properties>
 
     <dependencies>
@@ -99,6 +99,7 @@
     <profiles>
         <profile>
             <id>gatling</id>
+
             <pluginRepositories>
                 <pluginRepository>
                     <id>excilys</id>

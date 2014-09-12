@@ -1,10 +1,10 @@
-package basic
+package performance
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import scala.concurrent.duration._
 
-class SayHelloAndBye extends Simulation {
+class SayHelloAndByePerformance extends Simulation {
 
   val baseurl = System.getProperty("baseUrl", "http://localhost:4567")
   val datas = csv("username.csv").circular
@@ -18,8 +18,8 @@ class SayHelloAndBye extends Simulation {
 
 
   val scn = scenario("Scenario Hello and Bye") // A scenario is a chain of requests and pauses
+    .repeat(4) {
 
-    .during(1 minute) {
       feed(datas)
       .exec(http("request_hello")
       .get("/user/${username}")
@@ -30,6 +30,8 @@ class SayHelloAndBye extends Simulation {
       .get("/user/bye/${username}")
       .check(status.is(200))
       .check(regex("""Bye ${username}""").exists))
-    }
-  setUp(scn.inject(atOnceUsers(1)).protocols(httpConf))
+
+
+  }
+  setUp(scn.inject(rampUsersPerSec(10) to (100) during (1 minutes)).protocols(httpConf))
 }
