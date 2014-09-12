@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.xebia.jpthiery.xke.sample</groupId>
     <artifactId>sample-web</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gatling.version>2.0.0-RC4</gatling.version>
@@ -18,6 +16,11 @@
         <repot.release.name>release local docker</repot.release.name>
         <repot.release.url>http://192.168.59.101:8081/nexus/content/repositories/releases/</repot.release.url>
     </properties>
+
+    <scm>
+        <developerConnection>scm:git:file://localhost/root/workspace/deploy-sample-web/</developerConnection>
+      <tag>sample-web-0.0.1</tag>
+  </scm>
 
     <dependencies>
         <dependency>
