@@ -4,7 +4,7 @@
 
     <groupId>fr.xebia.jpthiery.xke.sample</groupId>
     <artifactId>sample-web</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.4</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gatling.version>2.0.0-RC4</gatling.version>
@@ -19,7 +19,7 @@
 
     <scm>
         <developerConnection>scm:git:git@github.com:jpthiery/sample-web.git</developerConnection>
-      <tag>sample-web-0.0.1</tag>
+      <tag>sample-web-0.0.4</tag>
   </scm>
 
     <dependencies>
