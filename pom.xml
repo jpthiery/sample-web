@@ -4,7 +4,7 @@
 
     <groupId>fr.xebia.jpthiery.xke.sample</groupId>
     <artifactId>sample-web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gatling.version>2.0.0-RC4</gatling.version>
