@@ -18,8 +18,9 @@
     </properties>
 
     <scm>
-        <developerConnection>scm:git:ssh://git@github.com:jpthiery/sample-web.git</developerConnection>
-    </scm>
+        <developerConnection>scm:git:git@github.com:jpthiery/sample-web.git</developerConnection>
+      <tag>sample-web-0.0.1</tag>
+  </scm>
 
     <dependencies>
         <dependency>
